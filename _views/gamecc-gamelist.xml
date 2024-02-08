@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+    <formatVersion>7</formatVersion>
+
+    <view name="gamecarousel" tinyScreen="false" displayName="GAMELIST">
+        <gamecarousel name="gamecarousel">
+            <type>vertical_wheel</type>
+            <pos>0.34 0</pos>
+            <size>1 1</size>
+            <origin>0 0</origin>
+            <logoSize>0.15 0.270</logoSize>
+            <logoScale>1.5</logoScale>
+            <color>00000000</color>
+            <maxLogoCount>11</maxLogoCount>
+            <logoRotation>-11</logoRotation>
+            <logoRotationOrigin>3 0.5</logoRotationOrigin>
+            <logoAlignment>center</logoAlignment>
+            <scrollSound>./_assets/sounds/click.wav</scrollSound>
+            <imageSource>marquee</imageSource>
+            <zIndex>21</zIndex>
+        </gamecarousel>
+
+        <text name="gamecarouselLogoText">
+            <color>FFFFFFFF</color>
+            <glowColor>00000050</glowColor>
+            <glowSize>3</glowSize>
+            <glowOffset>3</glowOffset>
+            <lineSpacing>1.0</lineSpacing>
+            <fontPath>./_assets/fonts/hs.ttf</fontPath>
+            <fontSize>0.060</fontSize>
+        </text>
+
+        <!-- Overlay background -->
+        <image name="overlay" extra="true">
+            <origin>0 0</origin>
+            <pos>0 0</pos>
+            <size>1 1</size>
+            <path>./_assets/_parts/overlay_gamelist.png</path>
+            <zIndex>17</zIndex>
+        </image>
+
+        <!-- Themes cinematics -->
+        <video name="md_theme" extra="true">
+            <origin>0 0</origin>
+            <pos>0 0</pos>
+            <size>1 1</size>
+            <delay>0.1</delay>
+            <effect>none</effect>
+            <path>./../../../../../roms/$system/medium_artwork/theme/{game:stem}.mp4</path>
+            <zIndex>40</zIndex>
+        </video>
+
+        <!-- Background Default -->
+        <image name="background_default" extra="true">
+            <origin>0 0</origin>
+            <pos>0 0</pos>
+            <size>1 1</size>
+            <path>./_assets/_parts/default.png</path>
+            <zIndex>1</zIndex>
+        </image>
+
+        <!-- Fanart background -->
+        <image name="md_fanart">
+            <origin>0 0</origin>
+            <pos>0 0</pos>
+            <size>1 1</size>
+            <zIndex>14</zIndex>
+
+            <storyboard event="activate">
+                <animation property="opacity" from="0" to="1" duration="800" mode="easeIn" />
+            </storyboard>
+        </image>
+
+        <!-- Video background -->
+        <video ifSubset="video_gamelist:Ativo" name="md_video">
+            <origin>0 0</origin>
+            <pos>0 0</pos>
+            <size>1 1</size>
+            <delay>3</delay>
+            <effect>none</effect>
+            <zIndex>16</zIndex>
+
+            <storyboard event="activate">
+                <animation property="opacity" from="0" to="1" duration="800" mode="easeIn" />
+            </storyboard>
+        </video>
+
+        <!-- Video transition -->
+        <video name="md_video_transitions" extra="true">
+            <origin>0 0</origin>
+            <pos>0 0</pos>
+            <size>1 1</size>
+            <delay>0.1</delay>
+            <effect>none</effect>
+            <loops>0</loops>
+            <path>./../_assets/transitions/$system/{game:stem}.flv</path>
+            <zIndex>99</zIndex>
+        </video>
+
+        <!-- Cover 3D -->
+        <image if="${system.name} != 'arcade'" name="md_thumbnail">
+            <origin>0 0.5</origin>
+            <pos>0.06 0.48</pos>
+            <size> 0.55</size>
+
+            <rotation>-4</rotation>
+            <zIndex>18</zIndex>
+
+            <storyboard event="activate">
+                <animation property="pos" from="-0.06 0.48" to="0.06 0.48" duration="600" mode="easeInOut" />
+            </storyboard>
+
+            <storyboard event="deactivate">
+                <animation property="opacity" from="1" to="0" duration="600" mode="easeInOut" />
+                <animation property="pos" from="0.06 0.48" to="-0.06 0.48" duration="600" mode="easeInOut" />
+            </storyboard>
+
+        </image>
+
+        <!-- Logo do Sistema -->
+        <image if="${system.name} != 'arcade'" name="logo">
+            <origin>0 0</origin>
+            <pos>0.025 0.04</pos>
+            <size>0.1 </size>
+            <scale>1</scale>
+            <path>./_assets/logos/$system.png</path>
+            <zIndex>99</zIndex>
+        </image>
+
+        <!-- Game Name -->
+        <text name="md_name">
+            <origin>0 0</origin>
+            <pos>0.028 0.77</pos>
+            <size>0.5 0.10</size>
+            <fontPath>./_assets/fonts/hs.ttf</fontPath>
+            <fontSize>0.044</fontSize>
+            <color>FFFF00FF</color>
+            <glowColor>000000</glowColor>
+            <glowSize>2</glowSize>
+            <glowOffset>1</glowOffset>
+            <alignment>left</alignment>
+            <zIndex>99</zIndex>
+
+            <storyboard event="activate">
+                <animation property="opacity" from="0" to="1" duration="800" mode="easeIn" />
+            </storyboard>
+        </text>
+
+        <!-- Game md_releasedate & md_publisher -->
+        <text name="date_and_developer" extra="true">
+            <origin>0 0</origin>
+            <pos>0.028 0.86</pos>
+            <size>0.5 0.016</size>
+            <text>{game:releaseyear}, {game:publisher}</text>
+            <fontPath>./_assets/fonts/hs.ttf</fontPath>
+            <fontSize>0.030</fontSize>
+            <color>FFFF00FF</color>
+            <glowColor>000000</glowColor>
+            <glowSize>2</glowSize>
+            <glowOffset>1</glowOffset>
+            <alignment>left</alignment>
+            <zIndex>99</zIndex>
+
+            <storyboard event="activate">
+                <animation property="opacity" from="0" to="1" duration="800" mode="easeIn" />
+            </storyboard>
+
+        </text>
+
+        <!-- imagem "FREE PLAY" -->
+        <image name="controls" extra="true">
+            <origin>0 0</origin>
+            <pos>0.365625 0.89</pos>
+            <size>0.26875 </size>
+            <delay>0.1</delay>
+            <path>./../_assets/_parts/controls_gamelist.gif</path>
+            <zIndex>99</zIndex>
+        </image>
+
+        <!-- imagem "PRESS START" -->
+        <image name="hs_freeplay, hs_freeplay2" extra="true">
+            <origin>0 0</origin>
+            <pos>0.015 0.92</pos>
+            <size>0.175 0.05</size>
+            <path>./_assets/_parts/hs_start.png</path>
+
+            <zIndex>90</zIndex>
+
+            <storyboard repeat="forever">
+                <animation property="color" from="FFFFFFFF" to="8ecbff" begin="0" duration="0" mode="linear" />
+                <animation property="color" from="FFFFFFFF" to="99fe96" begin="50" duration="0" mode="linear" />
+                <animation property="color" from="FFFFFFFF" to="ffa0ff" begin="100" duration="0" mode="linear" />
+                <animation property="color" from="FFFFFFFF" to="FFFFFFFF" begin="150" duration="0" mode="linear" />
+                <animation property="color" from="FFFFFFFF" to="8ecbff" begin="200" duration="0" mode="linear" />
+            </storyboard>
+        </image>
+        <image name="hs_freeplay2" extra="true">
+            <origin>1 0</origin>
+            <pos>0.985 0.92</pos>
+        </image>
+
+        <!-- ARCADE -->
+        <image if="${system.name} == 'arcade'" name="md_boxback">
+            <origin>0 0</origin>
+            <pos>0 0</pos>
+            <size>1 1</size>
+            <zIndex>20</zIndex>
+        </image>
+
+        <image if="${system.name} == 'arcade'" name="md_titleshot">
+            <origin>0 0</origin>
+            <pos>0.1 0.30</pos>
+            <size>0.37 0.485</size>
+            <zIndex>18</zIndex>
+
+            <storyboard event="activate">
+                <animation property="opacity" from="0" to="1" duration="800" mode="easeIn" />
+            </storyboard>
+        </image>
+
+        <video if="${system.name} == 'arcade'" name="md_video">
+            <pos>0.1 0.30</pos>
+            <size>0.37 0.485</size>
+            <delay>0</delay>
+            <zIndex>19</zIndex>
+        </video>
+
+    </view>
+
+</theme>

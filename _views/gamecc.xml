@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+    <formatVersion>7</formatVersion>
+
+    <view name="system">
+        <carousel name="systemcarousel">
+            <type>vertical_wheel</type>
+            <pos>0.34 0</pos>
+            <size>1 1</size>
+            <origin>0 0</origin>
+            <logoSize>0.15 0.270</logoSize>
+            <logoScale>1.5</logoScale>
+            <color>00000000</color>
+            <maxLogoCount>11</maxLogoCount>
+            <logoRotation>-11</logoRotation>
+            <logoRotationOrigin>3 0.5</logoRotationOrigin>
+            <logoAlignment>center</logoAlignment>
+            <scrollSound>./../_assets/sounds/click.wav</scrollSound>
+            <zIndex>43</zIndex>
+        </carousel>
+
+        <text name="logoText">
+            <color>FFFFFFFF</color>
+            <glowColor>00000050</glowColor>
+            <glowSize>3</glowSize>
+            <glowOffset>3</glowOffset>
+            <lineSpacing>1.0</lineSpacing>
+            <fontPath>./_assets/fonts/hs.ttf</fontPath>
+            <fontSize>0.060</fontSize>
+        </text>
+
+        <image name="logo">
+            <path>./../_assets/logos/$system.png</path>
+            <linearSmooth>true</linearSmooth>
+
+            <storyboard event="activate">
+                <animation property="opacity" to="1" begin="0" duration="0" mode="linear"/>
+                <animation property="scale" from="0.70" to="1.10" begin="0" duration="0" mode="linear"/>
+                <animation property="opacity" begin="1000" from="1" to="0" duration="500" mode="linear"/>
+            </storyboard>
+            <storyboard event="deactivate">
+                <animation property="opacity" from="0" to="0.3" duration="0" mode="Linear"/>
+                <animation property="scale" from="1.10" to="0.60" begin="0" duration="0" mode="easeOut"/>
+                <animation property="opacity" begin="1000" from="0.3" to="0" duration="500" mode="linear"/>
+            </storyboard>
+            <storyboard event="scroll">
+                <animation property="opacity" from="0" to="0.3" duration="0" mode="Linear"/>
+                <animation property="scale" from="1.10" to="0.60" begin="0" duration="0" mode="easeOut"/>
+                <animation property="opacity" begin="1000" from="0.3" to="0" duration="500" mode="linear"/>
+            </storyboard>
+        </image>
+
+        <image name="art" extra="true">
+            <origin>0 0</origin>
+            <pos>0 0</pos>
+            <size>1 1</size>
+            <linearSmooth>true</linearSmooth>
+            <path>./_assets/arts/$system.png</path>
+            <path>./_assets/arts/$system.jpg</path>
+            <zIndex>39</zIndex>
+        </image>
+
+        <video name="theme" extra="true">
+            <origin>0 0</origin>
+            <pos>0 0</pos>
+            <size>1 1</size>
+            <delay>0.1</delay>
+            <path>./../_assets/themes/$system.mp4</path>
+            <zIndex>40</zIndex>
+
+            <storyboard event="activate">
+                <animation property="opacity" from="0" to="1" duration="800" mode="easeIn" />
+            </storyboard>
+        </video>
+
+        <!-- Overlay background -->
+        <image name="overlay" extra="true">
+            <origin>0 0</origin>
+            <pos>0 0</pos>
+            <size>1 1</size>
+            <path>./_assets/_parts/overlay.png</path>
+            <zIndex>41</zIndex>
+        </image>
+
+        <!-- System Title -->
+        <text name="system_title" extra="true">
+            <origin>0 0</origin>
+            <pos>0.032 0.77</pos>
+            <size>0.5 0.10</size>
+            <text>${system.fullName}</text>
+            <fontPath>./_assets/fonts/hs.ttf</fontPath>
+            <fontSize>0.044</fontSize>
+            <color>FFFF00FF</color>
+            <glowColor>000000</glowColor>
+            <glowSize>2</glowSize>
+            <glowOffset>1</glowOffset>
+            <alignment>left</alignment>
+            <zIndex>50</zIndex>
+
+            <storyboard>
+                <animation property="opacity" from="0" to="1" duration="800" mode="EaseIn" />
+            </storyboard>
+        </text>
+
+        <!-- Número de Games -->
+        <text name="systemInfo">
+            <zIndex>0</zIndex>
+        </text>
+
+        <text name="systeminfo_gamecc" extra="true">
+            <origin>0 0</origin>
+            <pos>0.032 0.86</pos>
+            <size>0.5 0.016</size>
+            <text>{binding:total} games</text>
+            <text if="${system.name} == 'gamecc'">{binding:total} sistemas</text>
+            <fontPath>./_assets/fonts/hs.ttf</fontPath>
+            <fontSize>0.030</fontSize>
+            <color>FFFF00FF</color>
+            <glowColor>000000</glowColor>
+            <glowSize>2</glowSize>
+            <glowOffset>1</glowOffset>
+            <alignment>left</alignment>
+            <systemInfoDelay>0</systemInfoDelay>
+            <zIndex>95</zIndex>
+
+            <storyboard>
+                <animation property="opacity" from="0" to="1" duration="1200" mode="EaseIn" />
+            </storyboard>
+        </text>
+
+        <!-- imagem "FREE PLAY" -->
+        <image name="controls" extra="true">
+            <origin>0 0</origin>
+            <pos>0.365625 0.89</pos>
+            <size>0.26875 </size>
+            <delay>0.1</delay>
+            <path>./../_assets/_parts/controls.gif</path>
+            <zIndex>99</zIndex>
+        </image>
+
+        <!-- imagem "FREE PLAY" -->
+        <image name="hs_freeplay, hs_freeplay2" extra="true">
+            <origin>0 0</origin>
+            <pos>0.01 0.92</pos>
+            <size>0.175 0.05</size>
+            <path>./_assets/_parts/hs_freeplay.png</path>
+
+            <zIndex>90</zIndex>
+
+            <storyboard repeat="forever">
+                <animation property="color" from="FFFFFFFF" to="8ecbff" begin="0" duration="0" mode="linear" />
+                <animation property="color" from="FFFFFFFF" to="99fe96" begin="50" duration="0" mode="linear" />
+                <animation property="color" from="FFFFFFFF" to="ffa0ff" begin="100" duration="0" mode="linear" />
+                <animation property="color" from="FFFFFFFF" to="FFFFFFFF" begin="150" duration="0" mode="linear" />
+                <animation property="color" from="FFFFFFFF" to="8ecbff" begin="200" duration="0" mode="linear" />
+            </storyboard>
+        </image>
+        <image name="hs_freeplay2" extra="true">
+            <origin>1 0</origin>
+            <pos>0.99 0.92</pos>
+        </image>
+
+    </view>
+
+    <view name="screen">
+        <!-- controllerActivity -->
+        <controllerActivity name="controllerActivity">
+            <visible>false</visible>
+        </controllerActivity>
+
+        <!-- Clock -->
+        <text name="clock">
+            <visible>false</visible>
+        </text>
+
+    </view>
+
+</theme>

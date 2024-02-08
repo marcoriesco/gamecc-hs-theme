@@ -1,0 +1,61 @@
+<!--
+
+    	██████╗  █████╗ ███╗   ███╗███████╗ ██████╗ ██████╗
+	██╔════╝ ██╔══██╗████╗ ████║██╔════╝██╔════╝██╔════╝
+	██║  ███╗███████║██╔████╔██║█████╗  ██║     ██║
+	██║   ██║██╔══██║██║╚██╔╝██║██╔══╝  ██║     ██║
+	╚██████╔╝██║  ██║██║ ╚═╝ ██║███████╗╚██████╗╚██████╗
+	╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝ ╚═════╝ ╚═════╝
+
+	by Game Clandestino, 2.01, set 2022 For Batocera/Retrobat
+    -
+    https://gameclandestino.org
+    https://youtube.com/@gameclandestino
+    https://facebook.com/gameclandestino
+    https://discord.gg/cR3T4wkjyQ (Comunidade Clandestina)
+
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<theme defaultView="gamecarousel">
+    <formatVersion>7</formatVersion>
+
+    <!-- ICONSETS -->
+    <include name="DEFAULT">./_assets/iconsets/default.xml</include>
+
+    <!-- VIDEO GAMELIST -->
+    <subset name="video_gamelist" displayName="VIDEO GAMELIST">
+        <include name="Ativo" />
+        <include name="Desativado" />
+    </subset>
+
+
+    <feature supported="carousel">
+        <view name="system">
+            <sound name="bgsound"></sound>
+        </view>
+    </feature>
+
+    <variables>
+        <pinkColor>9f0043</pinkColor>
+        <yellowColor>facc00</yellowColor>
+        <gameccColor>${yellowColor}</gameccColor>
+        <arcadeColor>cc2a41</arcadeColor>
+        <computerColor>352f3d</computerColor>
+        <consoleColor>0074b4</consoleColor>
+        <portColor>583b7e</portColor>
+        <portableColor>027b7f</portableColor>
+        <allColor>${pinkColor}</allColor>
+        <collectionColor>${pinkColor}</collectionColor>
+    </variables>
+
+
+    <include name="system">./_views/gamecc.xml</include>
+    <include name="menu">./_views/menu.xml</include>
+    <include name="gamecarousel">./_views/gamecc-gamelist.xml</include>
+
+    <!-- Specific layout for systems -->
+    <include>./${system.theme}/custom.xml</include>
+
+</theme>
