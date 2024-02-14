@@ -24,6 +24,13 @@
     <!-- ICONSETS -->
     <include name="DEFAULT">./_assets/iconsets/default.xml</include>
 
+    <!-- VIDEO THEME CINEMATIC GAMELIST -->
+    <subset name="video_cinematic" displayName="VIDEO THEMES CINEMATICS">
+        <include name="Ativo" />
+        <include name="Desativado" />
+    </subset>
+
+
     <!-- VIDEO GAMELIST -->
     <subset name="video_gamelist" displayName="VIDEO GAMELIST">
         <include name="Ativo" />

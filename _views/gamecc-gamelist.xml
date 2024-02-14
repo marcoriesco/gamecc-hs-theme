@@ -39,8 +39,8 @@
             <zIndex>17</zIndex>
         </image>
 
-        <!-- Themes cinematics -->
-        <video name="md_theme" extra="true">
+        <!-- Video Themes Cinematics -->
+        <video ifSubset="video_cinematic:Ativo" name="md_theme" extra="true">
             <origin>0 0</origin>
             <pos>0 0</pos>
             <size>1 1</size>
@@ -48,6 +48,18 @@
             <effect>none</effect>
             <path>./../../../../../roms/$system/medium_artwork/theme/{game:stem}.mp4</path>
             <zIndex>40</zIndex>
+        </video>
+
+        <!-- Video Theme Transition -->
+        <video ifSubset="video_cinematic:Ativo" name="md_video_transitions" extra="true">
+            <origin>0 0</origin>
+            <pos>0 0</pos>
+            <size>1 1</size>
+            <delay>0.1</delay>
+            <effect>none</effect>
+            <loops>0</loops>
+            <path>./../_assets/transitions/$system/{game:stem}.flv</path>
+            <zIndex>99</zIndex>
         </video>
 
         <!-- Background Default -->
@@ -85,26 +97,16 @@
             </storyboard>
         </video>
 
-        <!-- Video transition -->
-        <video name="md_video_transitions" extra="true">
-            <origin>0 0</origin>
-            <pos>0 0</pos>
-            <size>1 1</size>
-            <delay>0.1</delay>
-            <effect>none</effect>
-            <loops>0</loops>
-            <path>./../_assets/transitions/$system/{game:stem}.flv</path>
-            <zIndex>99</zIndex>
-        </video>
-
         <!-- Cover 3D -->
         <image if="${system.name} != 'arcade'" name="md_thumbnail">
             <origin>0 0.5</origin>
             <pos>0.06 0.48</pos>
             <size> 0.55</size>
-
             <rotation>-4</rotation>
             <zIndex>18</zIndex>
+
+            <size if="${system.name} == 'bigfish'"> 0.5</size>
+            <pos if="${system.name} == 'bigfish'">0.06 0.5</pos>
 
             <storyboard event="activate">
                 <animation property="pos" from="-0.06 0.48" to="0.06 0.48" duration="600" mode="easeInOut" />
@@ -164,7 +166,6 @@
             <storyboard event="activate">
                 <animation property="opacity" from="0" to="1" duration="800" mode="easeIn" />
             </storyboard>
-
         </text>
 
         <!-- imagem "FREE PLAY" -->
