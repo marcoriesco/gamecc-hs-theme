@@ -51,14 +51,14 @@
         </video>
 
         <!-- Video Theme Transition -->
-        <video ifSubset="video_cinematic_transition:Ativo" name="md_video_transitions" extra="true">
+        <video ifSubset="video_cinematic:Ativo" name="md_video_transitions" extra="true">
             <origin>0 0</origin>
             <pos>0 0</pos>
             <size>1 1</size>
             <delay>0.1</delay>
             <effect>none</effect>
             <loops>0</loops>
-            <path>./../_assets/transitions/$system/{game:stem}.flv</path>
+            <path ifSubset="video_cinematic_transition:Ativo">./../_assets/transitions/$system/{game:stem}.flv</path>
             <zIndex>99</zIndex>
         </video>
 
