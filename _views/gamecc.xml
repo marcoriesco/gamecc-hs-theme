@@ -27,6 +27,22 @@
             <lineSpacing>1.0</lineSpacing>
             <fontPath>./_assets/fonts/hs.ttf</fontPath>
             <fontSize>0.060</fontSize>
+
+            <storyboard event="activate">
+                <animation property="opacity" to="1" begin="0" duration="0" mode="linear"/>
+                <animation property="scale" from="0.70" to="1.10" begin="0" duration="0" mode="linear"/>
+                <animation property="opacity" begin="1000" from="1" to="0" duration="500" mode="linear"/>
+            </storyboard>
+            <storyboard event="deactivate">
+                <animation property="opacity" from="0" to="0.3" duration="0" mode="Linear"/>
+                <animation property="scale" from="1.10" to="0.60" begin="0" duration="0" mode="easeOut"/>
+                <animation property="opacity" begin="1000" from="0.3" to="0" duration="500" mode="linear"/>
+            </storyboard>
+            <storyboard event="scroll">
+                <animation property="opacity" from="0" to="0.3" duration="0" mode="Linear"/>
+                <animation property="scale" from="1.10" to="0.60" begin="0" duration="0" mode="easeOut"/>
+                <animation property="opacity" begin="1000" from="0.3" to="0" duration="500" mode="linear"/>
+            </storyboard>
         </text>
 
         <image name="logo">
@@ -55,16 +71,17 @@
             <pos>0 0</pos>
             <size>1 1</size>
             <linearSmooth>true</linearSmooth>
-            <path>./_assets/arts/$system.png</path>
             <path>./_assets/arts/$system.jpg</path>
+            <path ifSubset="video_cinematic:Ativo">./_assets/frames/$system.jpg</path>
             <zIndex>39</zIndex>
         </image>
 
-        <video name="theme" extra="true">
+        <video ifSubset="video_cinematic:Ativo" name="md_theme" extra="true">
             <origin>0 0</origin>
             <pos>0 0</pos>
             <size>1 1</size>
             <delay>0.1</delay>
+            <effect>none</effect>
             <path>./../_assets/themes/$system.mp4</path>
             <zIndex>40</zIndex>
 
