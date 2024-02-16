@@ -24,20 +24,26 @@
     <!-- ICONSETS -->
     <include name="DEFAULT">./_assets/iconsets/default.xml</include>
 
+    <!-- VIDEO THEME CINEMATIC GAMELIST -->
+    <subset name="video_system_cinematic" displayName="SYSTEM: VIDEO THEMES">
+        <include name="Ativo" />
+        <include name="Desativado" />
+    </subset>
+
     <!-- VIDEO GAMELIST -->
-    <subset name="video_gamelist" displayName="VIDEO GAMELIST">
+    <subset name="video_gamelist" displayName="GAMELIST: GAMEPLAY">
         <include name="Ativo" />
         <include name="Desativado" />
     </subset>
 
     <!-- VIDEO THEME CINEMATIC GAMELIST -->
-    <subset name="video_cinematic" displayName="VIDEO THEMES CINEMATICS">
+    <subset name="video_cinematic" displayName="GAMELIST: VIDEO THEMES">
         <include name="Ativo" />
         <include name="Desativado" />
     </subset>
 
     <!-- TRANSIÇÕES ENTRE THEMES CINEMATICS -->
-    <subset name="video_cinematic_transition" displayName="ANIMAÇÃO ENTRE VIDEO THEMES CINEMATICS">
+    <subset name="video_cinematic_transition" displayName="GAMELIST: VIDEO TRANSITIONS">
         <include name="Ativo" />
         <include name="Desativado" />
     </subset>

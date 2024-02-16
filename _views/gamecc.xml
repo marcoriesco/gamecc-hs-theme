@@ -101,11 +101,11 @@
             <size>1 1</size>
             <linearSmooth>true</linearSmooth>
             <path>./_assets/arts/$system.jpg</path>
-            <path ifSubset="video_cinematic:Ativo">./_assets/frames/$system.jpg</path>
+            <path ifSubset="video_system_cinematic:Ativo">./_assets/frames/$system.jpg</path>
             <zIndex>39</zIndex>
         </image>
 
-        <video ifSubset="video_cinematic:Ativo" name="md_theme" extra="true">
+        <video ifSubset="video_system_cinematic:Ativo" name="md_theme" extra="true">
             <origin>0 0</origin>
             <pos>0 0</pos>
             <size>1 1</size>
@@ -119,7 +119,7 @@
             </storyboard>
         </video>
 
-        <!-- Overlay background -->
+        <!-- Overlay Background -->
         <image name="overlay" extra="true">
             <origin>0 0</origin>
             <pos>0 0</pos>
