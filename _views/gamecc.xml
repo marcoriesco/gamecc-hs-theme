@@ -77,7 +77,7 @@
             <path>./_assets/logos/jp/${system.theme}.svg</path>
         </image>
 
-        <image name="logo" ifSubset="video_cinematic:Ativo">
+        <image name="logo" ifSubset="video_system_cinematic:Ativo">
             <storyboard event="activate">
                 <animation property="opacity" to="1" begin="0" duration="0" mode="linear"/>
                 <animation property="scale" from="0.70" to="1.10" begin="0" duration="0" mode="linear"/>
