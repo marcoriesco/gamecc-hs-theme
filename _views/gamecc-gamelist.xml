@@ -83,6 +83,19 @@
             </storyboard>
         </image>
 
+        <!-- Fanart Collection background -->
+        <image name="md_fanart_collection" if="${system.collection}" extra="true">
+            <origin>0 0</origin>
+            <pos>0 0</pos>
+            <size>1 1</size>
+            <path>./../_assets/arts/{game:name}.jpg</path>
+            <zIndex>15</zIndex>
+
+            <storyboard event="activate">
+                <animation property="opacity" from="0" to="1" duration="800" mode="easeIn" />
+            </storyboard>
+        </image>
+
         <!-- Video background -->
         <video ifSubset="video_gamelist:Ativo" name="md_video">
             <origin>0 0</origin>
@@ -98,7 +111,7 @@
         </video>
 
         <!-- Cover 3D -->
-        <image if="${system.name} != 'arcade'" name="md_thumbnail">
+        <image if="${system.name} != 'arcade' && ${system.name} != 'collections'" name="md_thumbnail">
             <origin>0 0.5</origin>
 
             <pos>0.06 0.48</pos>
@@ -139,13 +152,6 @@
             <path>./_assets/logos/${system.theme}-${lang}.svg</path>
             <linearSmooth>true</linearSmooth>
         </image>
-        <!-- custom collections logos -->
-        <image name="logo" if="{system.collection}">
-            <path>./_assets/logos/collections/${system.theme}.png</path>
-            <path>./_assets/logos/collections/${system.theme}.svg</path>
-            <path>./_assets/logos/collections/${system.theme}-w.png</path>
-            <path>./_assets/logos/collections/${system.theme}-w.svg</path>
-        </image>
         <!-- ui items listed into region theme settings -->
         <image name="logo" region="eu"/>
         <image name="logo" region="br">
@@ -160,7 +166,6 @@
             <path>./_assets/logos/jp/${system.theme}.png</path>
             <path>./_assets/logos/jp/${system.theme}.svg</path>
         </image>
-
 
 
         <!-- Game Name -->
@@ -187,7 +192,8 @@
             <origin>0 0</origin>
             <pos>0.028 0.86</pos>
             <size>0.5 0.016</size>
-            <text>{game:releaseyear}, {game:publisher}</text>
+            <!-- <text if="!${system.collection}">{game:releaseyear}, {game:publisher}</text> -->
+            <text>${system.collection} ${system.name} ${system.theme}</text>
             <fontPath>./_assets/fonts/hs.ttf</fontPath>
             <fontSize>0.030</fontSize>
             <color>FFFF00FF</color>
