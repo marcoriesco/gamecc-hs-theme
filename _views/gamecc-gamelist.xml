@@ -144,27 +144,27 @@
             <zIndex>99</zIndex>
 
             <!-- try png -->
-            <path>./_assets/logos/${system.theme}.png</path>
+            <path>./_assets/logos/clean/${system.theme}.png</path>
             <!-- try svg -->
-            <path>./_assets/logos/${system.theme}.svg</path>
+            <path>./_assets/logos/clean/${system.theme}.svg</path>
             <!-- check if lang resources exist -->
-            <path>./_assets/logos/${system.theme}-${lang}.png</path>
-            <path>./_assets/logos/${system.theme}-${lang}.svg</path>
+            <path>./_assets/logos/clean/${system.theme}-${lang}.png</path>
+            <path>./_assets/logos/clean/${system.theme}-${lang}.svg</path>
             <linearSmooth>true</linearSmooth>
         </image>
         <!-- ui items listed into region theme settings -->
         <image name="logo" region="eu"/>
         <image name="logo" region="br">
-            <path>./_assets/logos/br/${system.theme}.png</path>
-            <path>./_assets/logos/br/${system.theme}.svg</path>
+            <path>./_assets/logos/clean/br/${system.theme}.png</path>
+            <path>./_assets/logos/clean/br/${system.theme}.svg</path>
         </image>
         <image name="logo" region="us">
-            <path>./_assets/logos/us/${system.theme}.png</path>
-            <path>./_assets/logos/us/${system.theme}.svg</path>
+            <path>./_assets/logos/clean/us/${system.theme}.png</path>
+            <path>./_assets/logos/clean/us/${system.theme}.svg</path>
         </image>
         <image name="logo" region="jp">
-            <path>./_assets/logos/jp/${system.theme}.png</path>
-            <path>./_assets/logos/jp/${system.theme}.svg</path>
+            <path>./_assets/logos/clean/jp/${system.theme}.png</path>
+            <path>./_assets/logos/clean/jp/${system.theme}.svg</path>
         </image>
 
 

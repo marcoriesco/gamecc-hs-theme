@@ -29,71 +29,79 @@
             <fontSize>0.060</fontSize>
 
             <storyboard event="activate">
-                <animation property="opacity" to="1" begin="0" duration="0" mode="linear"/>
+                <animation property="opacity" from="0.3" to="1" duration="0" mode="Linear"/>
                 <animation property="scale" from="0.70" to="1.10" begin="0" duration="0" mode="linear"/>
-                <animation property="opacity" begin="1000" from="1" to="0" duration="500" mode="linear"/>
             </storyboard>
             <storyboard event="deactivate">
                 <animation property="opacity" from="0" to="0.3" duration="0" mode="Linear"/>
                 <animation property="scale" from="1.10" to="0.60" begin="0" duration="0" mode="easeOut"/>
-                <animation property="opacity" begin="1000" from="0.3" to="0" duration="500" mode="linear"/>
             </storyboard>
             <storyboard event="scroll">
                 <animation property="opacity" from="0" to="0.3" duration="0" mode="Linear"/>
                 <animation property="scale" from="1.10" to="0.60" begin="0" duration="0" mode="easeOut"/>
-                <animation property="opacity" begin="1000" from="0.3" to="0" duration="500" mode="linear"/>
             </storyboard>
         </text>
 
         <image name="logo">
             <!-- try png -->
-            <path>./_assets/logos/${system.theme}.png</path>
+            <path>./_assets/logos/silver/${system.theme}.png</path>
             <!-- try svg -->
-            <path>./_assets/logos/${system.theme}.svg</path>
+            <path>./_assets/logos/silver/${system.theme}.svg</path>
             <!-- check if lang resources exist -->
-            <path>./_assets/logos/${system.theme}-${lang}.png</path>
-            <path>./_assets/logos/${system.theme}-${lang}.svg</path>
+            <path>./_assets/logos/silver/${system.theme}-${lang}.png</path>
+            <path>./_assets/logos/silver/${system.theme}-${lang}.svg</path>
             <linearSmooth>true</linearSmooth>
         </image>
         <!-- custom collections logos -->
         <image name="logo" if="{system.collection}">
-            <path>./_assets/logos/collections/${system.theme}.png</path>
-            <path>./_assets/logos/collections/${system.theme}.svg</path>
-            <path>./_assets/logos/collections/${system.theme}-w.png</path>
-            <path>./_assets/logos/collections/${system.theme}-w.svg</path>
+            <path>./_assets/logos/silver/collections/${system.theme}.png</path>
+            <path>./_assets/logos/silver/collections/${system.theme}.svg</path>
+            <path>./_assets/logos/silver/collections/${system.theme}-w.png</path>
+            <path>./_assets/logos/silver/collections/${system.theme}-w.svg</path>
         </image>
         <!-- ui items listed into region theme settings -->
         <image name="logo" region="eu"/>
         <image name="logo" region="br">
-            <path>./_assets/logos/br/${system.theme}.png</path>
-            <path>./_assets/logos/br/${system.theme}.svg</path>
+            <path>./_assets/logos/silver/br/${system.theme}.png</path>
+            <path>./_assets/logos/silver/br/${system.theme}.svg</path>
         </image>
         <image name="logo" region="us">
-            <path>./_assets/logos/us/${system.theme}.png</path>
-            <path>./_assets/logos/us/${system.theme}.svg</path>
+            <path>./_assets/logos/silver/us/${system.theme}.png</path>
+            <path>./_assets/logos/silver/us/${system.theme}.svg</path>
         </image>
         <image name="logo" region="jp">
-            <path>./_assets/logos/jp/${system.theme}.png</path>
-            <path>./_assets/logos/jp/${system.theme}.svg</path>
+            <path>./_assets/logos/silver/jp/${system.theme}.png</path>
+            <path>./_assets/logos/silver/jp/${system.theme}.svg</path>
         </image>
 
-        <image name="logo" ifSubset="video_system_cinematic:Ativo">
+        <image name="logo">
             <storyboard event="activate">
-                <animation property="opacity" to="1" begin="0" duration="0" mode="linear"/>
+                <animation property="opacity" from="0.3" to="1" duration="0" mode="Linear"/>
                 <animation property="scale" from="0.70" to="1.10" begin="0" duration="0" mode="linear"/>
-                <animation property="opacity" begin="1000" from="1" to="0" duration="500" mode="linear"/>
             </storyboard>
             <storyboard event="deactivate">
                 <animation property="opacity" from="0" to="0.3" duration="0" mode="Linear"/>
                 <animation property="scale" from="1.10" to="0.60" begin="0" duration="0" mode="easeOut"/>
-                <animation property="opacity" begin="1000" from="0.3" to="0" duration="500" mode="linear"/>
             </storyboard>
             <storyboard event="scroll">
                 <animation property="opacity" from="0" to="0.3" duration="0" mode="Linear"/>
                 <animation property="scale" from="1.10" to="0.60" begin="0" duration="0" mode="easeOut"/>
+            </storyboard>
+        </image>
+
+        <!-- Desaparecer menu caso esteja Video Cinematics Ativo -->
+        <image name="logo" ifSubset="video_system_cinematic:Ativo">
+            <storyboard event="activate">
+                <animation property="opacity" begin="1000" from="1" to="0" duration="500" mode="linear"/>
+            </storyboard>
+            <storyboard event="deactivate">
+                <animation property="opacity" begin="1000" from="0.3" to="0" duration="500" mode="linear"/>
+            </storyboard>
+            <storyboard event="scroll">
                 <animation property="opacity" begin="1000" from="0.3" to="0" duration="500" mode="linear"/>
             </storyboard>
         </image>
+
 
         <image name="art" extra="true">
             <origin>0 0</origin>
