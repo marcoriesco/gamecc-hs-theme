@@ -7,7 +7,8 @@
 	╚██████╔╝██║  ██║██║ ╚═╝ ██║███████╗╚██████╗╚██████╗
 	╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝ ╚═════╝ ╚═════╝
 
-	by Game Clandestino, 2.01, set 2022 For Batocera/Retrobat
+	author: Game Clandestino
+    version: 2.01
     -
     https://gameclandestino.org
     https://youtube.com/@gameclandestino
@@ -24,7 +25,13 @@
     <!-- ICONSETS -->
     <include name="DEFAULT">./_assets/iconsets/default.xml</include>
 
-    <!-- VIDEO THEME CINEMATIC GAMELIST -->
+    <!-- VIDEO THEME CINEMATIC SYSTEM -->
+    <subset name="logo_carousel" displayName="LOGOS">
+        <include name="silver" />
+        <include name="clean" />
+    </subset>
+
+    <!-- TIPO DE LOGO ROLETA -->
     <subset name="video_system_cinematic" displayName="VIDEO THEMES">
         <include name="Ativo" />
         <include name="Desativado" />
@@ -58,6 +65,10 @@
 
     <include name="system">./_views/gamecc.xml</include>
     <include name="menu">./_views/menu.xml</include>
+
+    <include ifSubset="logo_carousel:clean" name="system">./_views/logos/clean.xml</include>
+    <include ifSubset="logo_carousel:silver" name="system">./_views/logos/silver.xml</include>
+
     <include name="gamecarousel">./_views/gamecc-gamelist.xml</include>
 
 </theme>
