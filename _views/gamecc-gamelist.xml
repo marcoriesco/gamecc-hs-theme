@@ -90,6 +90,10 @@
             <origin>0 0</origin>
             <pos>0 0</pos>
             <size>1 1</size>
+
+            <pos if="${system.name} == 'arcade'">0.4 0</pos>
+            <size if="${system.name} == 'arcade'">0.6 1</size>
+
             <zIndex>14</zIndex>
 
             <storyboard event="activate">
