@@ -42,6 +42,18 @@
             </storyboard>
         </text>
 
+        <text name="logoText" ifSubset="video_system_cinematic:Ativo">
+            <storyboard event="activate">
+                <animation property="opacity" begin="1000" from="1" to="0" duration="500" mode="linear"/>
+            </storyboard>
+            <storyboard event="deactivate">
+                <animation property="opacity" begin="1000" from="0.3" to="0" duration="500" mode="linear"/>
+            </storyboard>
+            <storyboard event="scroll">
+                <animation property="opacity" begin="1000" from="0.3" to="0" duration="500" mode="linear"/>
+            </storyboard>
+        </text>
+
         <image name="logo">
             <storyboard event="activate">
                 <animation property="opacity" from="0.3" to="1" duration="0" mode="Linear"/>
