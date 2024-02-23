@@ -29,6 +29,7 @@
     <subset name="logo_carousel" displayName="LOGOS">
         <include name="silver" />
         <include name="clean" />
+        <include name="glass" />
     </subset>
 
     <!-- TIPO DE LOGO ROLETA -->
@@ -68,6 +69,7 @@
 
     <include ifSubset="logo_carousel:clean" name="system">./_views/logos/clean.xml</include>
     <include ifSubset="logo_carousel:silver" name="system">./_views/logos/silver.xml</include>
+    <include ifSubset="logo_carousel:glass" name="system">./_views/logos/glass.xml</include>
 
     <include name="gamecarousel">./_views/gamecc-gamelist.xml</include>
 
