@@ -124,6 +124,8 @@
             <size> 0.55</size>
             <size if="${system.name} == 'bigfish'"> 0.5</size>
             <size if="${system.name} == 'tiger'"> 0.45</size>
+            <size if="${system.name} == '3ds'"> 0.4</size>
+            <size if="${system.name} == 'snes'"> 0.4</size>
 
             <rotation>-4</rotation>
             <zIndex>18</zIndex>
