@@ -29,15 +29,15 @@
             <fontSize>0.060</fontSize>
 
             <storyboard event="activate">
-                <animation property="opacity" from="0.3" to="1" duration="0" mode="Linear"/>
+                <animation property="opacity" from="0.2" to="1" duration="0" mode="Linear"/>
                 <animation property="scale" from="0.70" to="1.10" begin="0" duration="0" mode="linear"/>
             </storyboard>
             <storyboard event="deactivate">
-                <animation property="opacity" from="0" to="0.3" duration="0" mode="Linear"/>
+                <animation property="opacity" from="0" to="0.2" duration="0" mode="Linear"/>
                 <animation property="scale" from="1.10" to="0.60" begin="0" duration="0" mode="easeOut"/>
             </storyboard>
             <storyboard event="scroll">
-                <animation property="opacity" from="0" to="0.3" duration="0" mode="Linear"/>
+                <animation property="opacity" from="0" to="0.2" duration="0" mode="Linear"/>
                 <animation property="scale" from="1.10" to="0.60" begin="0" duration="0" mode="easeOut"/>
             </storyboard>
         </text>
@@ -47,24 +47,24 @@
                 <animation property="opacity" begin="1000" from="1" to="0" duration="500" mode="linear"/>
             </storyboard>
             <storyboard event="deactivate">
-                <animation property="opacity" begin="1000" from="0.3" to="0" duration="500" mode="linear"/>
+                <animation property="opacity" begin="1000" from="0.2" to="0" duration="500" mode="linear"/>
             </storyboard>
             <storyboard event="scroll">
-                <animation property="opacity" begin="1000" from="0.3" to="0" duration="500" mode="linear"/>
+                <animation property="opacity" begin="1000" from="0.2" to="0" duration="500" mode="linear"/>
             </storyboard>
         </text>
 
         <image name="logo">
             <storyboard event="activate">
-                <animation property="opacity" from="0.3" to="1" duration="0" mode="Linear"/>
+                <animation property="opacity" from="0.2" to="1" duration="0" mode="Linear"/>
                 <animation property="scale" from="0.70" to="1.10" begin="0" duration="0" mode="linear"/>
             </storyboard>
             <storyboard event="deactivate">
-                <animation property="opacity" from="0" to="0.3" duration="0" mode="Linear"/>
+                <animation property="opacity" from="0" to="0.2" duration="0" mode="Linear"/>
                 <animation property="scale" from="1.10" to="0.60" begin="0" duration="0" mode="easeOut"/>
             </storyboard>
             <storyboard event="scroll">
-                <animation property="opacity" from="0" to="0.3" duration="0" mode="Linear"/>
+                <animation property="opacity" from="0" to="0.2" duration="0" mode="Linear"/>
                 <animation property="scale" from="1.10" to="0.60" begin="0" duration="0" mode="easeOut"/>
             </storyboard>
         </image>

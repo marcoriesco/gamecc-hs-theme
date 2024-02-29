@@ -20,6 +20,21 @@
             <zIndex>21</zIndex>
         </gamecarousel>
 
+        <image name="gamecarouselLogo">
+            <storyboard event="activate">
+                <animation property="opacity" from="0.2" to="1" duration="0" mode="Linear"/>
+                <animation property="scale" from="0.70" to="1.10" begin="0" duration="0" mode="linear"/>
+            </storyboard>
+            <storyboard event="deactivate">
+                <animation property="opacity" from="0" to="0.2" duration="0" mode="Linear"/>
+                <animation property="scale" from="1.10" to="0.60" begin="0" duration="0" mode="easeOut"/>
+            </storyboard>
+            <storyboard event="scroll">
+                <animation property="opacity" from="0" to="0.2" duration="0" mode="Linear"/>
+                <animation property="scale" from="1.10" to="0.60" begin="0" duration="0" mode="easeOut"/>
+            </storyboard>
+        </image>
+
         <text name="gamecarouselLogoText">
             <color>FFFFFFFF</color>
             <glowColor>00000050</glowColor>
@@ -28,6 +43,31 @@
             <lineSpacing>1.0</lineSpacing>
             <fontPath>./_assets/fonts/hs.ttf</fontPath>
             <fontSize>0.060</fontSize>
+
+            <storyboard event="activate">
+                <animation property="opacity" from="0.2" to="1" duration="0" mode="Linear"/>
+                <animation property="scale" from="0.70" to="1.10" begin="0" duration="0" mode="linear"/>
+            </storyboard>
+            <storyboard event="deactivate">
+                <animation property="opacity" from="0" to="0.2" duration="0" mode="Linear"/>
+                <animation property="scale" from="1.10" to="0.60" begin="0" duration="0" mode="easeOut"/>
+            </storyboard>
+            <storyboard event="scroll">
+                <animation property="opacity" from="0" to="0.2" duration="0" mode="Linear"/>
+                <animation property="scale" from="1.10" to="0.60" begin="0" duration="0" mode="easeOut"/>
+            </storyboard>
+        </text>
+
+        <text name="gamecarouselLogoText" ifSubset="video_system_cinematic:Ativo">
+            <storyboard event="activate">
+                <animation property="opacity" begin="1000" from="1" to="0" duration="500" mode="linear"/>
+            </storyboard>
+            <storyboard event="deactivate">
+                <animation property="opacity" begin="1000" from="0.2" to="0" duration="500" mode="linear"/>
+            </storyboard>
+            <storyboard event="scroll">
+                <animation property="opacity" begin="1000" from="0.2" to="0" duration="500" mode="linear"/>
+            </storyboard>
         </text>
 
         <!-- Overlay background -->
@@ -106,7 +146,7 @@
             <origin>0 0</origin>
             <pos>0 0</pos>
             <size>1 1</size>
-            <path>./../_assets/arts/{game:name}.jpg</path>
+            <path>./../_assets/arts/collections/{game:name}.jpg</path>
             <zIndex>15</zIndex>
 
             <storyboard event="activate">
@@ -199,7 +239,7 @@
             <pos>0.028 0.86</pos>
             <size>0.5 0.016</size>
             <text if="!${system.collection}">{game:releaseyear}, {game:publisher}</text>
-            <!-- <text>${system.collection} ${system.name} ${system.theme}</text> -->
+            <text if="${system.collection}">{game:system:total} && {game:system:total} > 1 ? '{game:system:total} GAMES' : '{game:system:total} GAME'</text>
             <fontPath>./_assets/fonts/hs.ttf</fontPath>
             <fontSize>0.030</fontSize>
             <color>FFFF00FF</color>
