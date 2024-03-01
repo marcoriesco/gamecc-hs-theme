@@ -166,11 +166,13 @@
             <size if="${system.name} == 'tiger'"> 0.45</size>
             <size if="${system.name} == '3ds'"> 0.4</size>
             <size if="${system.name} == 'snes'"> 0.4</size>
+            <size if="${system.name} == 'ngage'"> 0.4</size>
 
             <rotation>-4</rotation>
             <zIndex>18</zIndex>
 
             <storyboard event="activate">
+                <animation property="opacity" from="0" to="1" duration="600" mode="easeInOut" />
                 <animation property="pos" from="-0.06 0.48" to="0.06 0.48" duration="600" mode="easeInOut" />
             </storyboard>
 
