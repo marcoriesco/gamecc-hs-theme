@@ -101,6 +101,7 @@
             <delay>0.1</delay>
             <effect>none</effect>
             <path>./../../../../../roms/$system/medium_artwork/theme/{game:stem}.mp4</path>
+            <path if="${system.collection}">./../_assets/themes/collections/{game:name}.mp4</path>
             <zIndex>40</zIndex>
         </video>
 
@@ -166,6 +167,7 @@
             <size if="${system.name} == 'bigfish'"> 0.45</size>
             <size if="${system.name} == 'tiger'"> 0.45</size>
             <size if="${system.name} == 'snes-msu1'"> 0.45</size>
+            <size if="${system.name} == 'dreamcast'"> 0.45</size>
 
             <size if="${system.name} == '3ds'"> 0.4</size>
             <size if="${system.name} == 'snes'"> 0.4</size>
