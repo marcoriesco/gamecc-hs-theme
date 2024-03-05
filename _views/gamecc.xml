@@ -121,7 +121,7 @@
             <origin>0 0</origin>
             <pos>0.032 0.77</pos>
             <size>0.5 0.10</size>
-            <text>${system.fullName}</text>
+            <text>${system.fullName} $system</text>
             <fontPath>./_assets/fonts/hs.ttf</fontPath>
             <fontSize>0.044</fontSize>
             <color>FFFF00FF</color>
