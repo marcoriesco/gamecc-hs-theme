@@ -170,6 +170,7 @@
             <size if="${system.name} == 'dreamcast'"> 0.45</size>
 
             <size if="${system.name} == '3ds'"> 0.4</size>
+            <size if="${system.name} == '3do-japan'"> 0.4</size>
             <size if="${system.name} == 'snes'"> 0.4</size>
             <size if="${system.name} == 'ngage'"> 0.4</size>
 
