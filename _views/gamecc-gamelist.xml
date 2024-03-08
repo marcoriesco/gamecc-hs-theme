@@ -160,8 +160,6 @@
             <origin>0 0.5</origin>
 
             <pos>0.06 0.48</pos>
-            <pos if="${system.name} == 'bigfish'">0.06 0.5</pos>
-
             <size> 0.55</size>
 
             <size if="${system.name} == 'bigfish'"> 0.45</size>
