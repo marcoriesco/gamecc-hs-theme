@@ -56,6 +56,13 @@
         <include name="Desativado" />
     </subset>
 
+    <!-- ARCADE GAMELIST: THEME DEFAULT -->
+    <subset name="arcade_gamelist" displayName="ARCADE: THEME DEFAULT" appliesTo="gamelist">
+        <include name="Ativo" />
+        <include name="Desativado" />
+    </subset>
+
+
 
     <feature supported="carousel">
         <view name="system">
