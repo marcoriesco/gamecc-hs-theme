@@ -155,7 +155,8 @@
         <image if="${system.name} != 'collections'" name="md_thumbnail">
             <origin>0 0.5</origin>
             <pos>0.06 0.48</pos>
-            <size> 0.55</size>
+            <!-- <size> 0.55</size> -->
+            <maxSize>0.4 0.55</maxSize>
 
             <size if="${system.name} == 'bigfish'"> 0.45</size>
             <size if="${system.name} == 'tiger'"> 0.45</size>
