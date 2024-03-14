@@ -240,7 +240,7 @@
             <origin>0 0</origin>
             <pos>0.028 0.86</pos>
             <size>0.5 0.016</size>
-            <text if="!${system.collection}">{game:releaseyear}, {game:publisher}</text>
+            <text if="!${system.collection}">{game:releaseyear}, {game:publisher} </text>
             <text if="${system.collection}">{game:system:total} && {game:system:total} > 1 ? '{game:system:total} GAMES' : '{game:system:total} GAME'</text>
             <fontPath>./_assets/fonts/hs.ttf</fontPath>
             <fontSize>0.030</fontSize>
