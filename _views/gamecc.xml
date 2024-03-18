@@ -82,6 +82,14 @@
             </storyboard>
         </image>
 
+        <!-- Pointers -->
+        <image name="pointer" extra="true">
+            <pos>0.966 0.50</pos>
+            <origin>0.5 0.5</origin>
+            <size>0.075 0.175</size>
+            <path>./_assets/pointers/default.png</path>
+            <zIndex>42</zIndex>
+        </image>
 
         <image name="art" extra="true">
             <origin>0 0</origin>
