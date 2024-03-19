@@ -55,7 +55,7 @@
             <iconRetroachievements>./_assets/icons/Contest.png</iconRetroachievements>
             <iconEmuelec>./_assets/icons/Emuelec.png</iconEmuelec>
         </menuIcons>
-        
+
         <helpsystem name="help">
             <fontPath>./_assets/fonts/RobotoCondensed-Regular.ttf</fontPath>
             <fontSize>0.022</fontSize>
