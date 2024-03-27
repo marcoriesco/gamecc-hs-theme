@@ -73,7 +73,7 @@
         <!-- Pointers -->
         <image name="pointer" extra="true">
             <origin>1 0.5</origin>
-            <pos>1 0.5</pos>
+            <pos>1.002 0.5</pos>
             <maxSize>0.2 0.2</maxSize>
             <path>./_assets/pointers/default.png</path>
             <path>./_assets/pointers/$system.png</path>
@@ -85,16 +85,16 @@
             </storyboard>
 
             <storyboard event="activateNext">
-                <animation property="x" from="1" to="1.02" duration="100" autoreverse="true" />
+                <animation property="x" from="1.002" to="1.02" duration="100" autoreverse="true" />
             </storyboard>
             <storyboard event="activatePrev">
-                <animation property="x" from="1" to="1.02" duration="100" autoreverse="true" />
+                <animation property="x" from="1.002" to="1.02" duration="100" autoreverse="true" />
             </storyboard>
             <storyboard event="deactivateNext">
-                <animation property="x" from="1" to="1.02" duration="100" />
+                <animation property="x" from="1.002" to="1.02" duration="100" />
             </storyboard>
             <storyboard event="deactivatePrev">
-                <animation property="x" from="1" to="1.02" duration="100" />
+                <animation property="x" from="1.002" to="1.02" duration="100" />
             </storyboard>
         </image>
 
