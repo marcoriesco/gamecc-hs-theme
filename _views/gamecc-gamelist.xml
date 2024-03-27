@@ -73,8 +73,8 @@
         <!-- Pointers -->
         <image name="pointer" extra="true">
             <origin>1 0.5</origin>
-            <pos>1.002 0.5</pos>
-            <maxSize>0.2 0.2</maxSize>
+            <pos>1.02 0.5</pos>
+            <maxSize>0.15 0.15</maxSize>
             <path>./_assets/pointers/default.png</path>
             <path>./_assets/pointers/$system.png</path>
 
@@ -85,16 +85,16 @@
             </storyboard>
 
             <storyboard event="activateNext">
-                <animation property="x" from="1.002" to="1.02" duration="100" autoreverse="true" />
+                <animation property="x" from="1.02" to="1.04" duration="100" autoreverse="true" />
             </storyboard>
             <storyboard event="activatePrev">
-                <animation property="x" from="1.002" to="1.02" duration="100" autoreverse="true" />
+                <animation property="x" from="1.02" to="1.04" duration="100" autoreverse="true" />
             </storyboard>
             <storyboard event="deactivateNext">
-                <animation property="x" from="1.002" to="1.02" duration="100" />
+                <animation property="x" from="1.02" to="1.104" duration="0" />
             </storyboard>
             <storyboard event="deactivatePrev">
-                <animation property="x" from="1.002" to="1.02" duration="100" />
+                <animation property="x" from="1.02" to="1.104" duration="0" />
             </storyboard>
         </image>
 
@@ -186,15 +186,16 @@
             <!-- <size> 0.55</size> -->
             <maxSize>0.3 0.55</maxSize>
 
-            <size if="${system.name} == 'bigfish'"> 0.45</size>
-            <size if="${system.name} == 'tiger'"> 0.45</size>
-            <size if="${system.name} == 'snes-msu1'"> 0.45</size>
-            <size if="${system.name} == 'dreamcast'"> 0.45</size>
+            <maxSize if="${system.name} == 'bigfish'">0.3 0.45</maxSize>
+            <maxSize if="${system.name} == 'tiger'">0.3 0.45</maxSize>
+            <maxSize if="${system.name} == 'snes-msu1'">0.3 0.45</maxSize>
+            <maxSize if="${system.name} == 'dreamcast'">0.3 0.45</maxSize>
+            <maxSize if="${system.name} == 'psx'">0.3 0.45</maxSize>
 
-            <size if="${system.name} == '3ds'"> 0.4</size>
-            <size if="${system.name} == '3do-japan'"> 0.4</size>
-            <size if="${system.name} == 'snes'"> 0.4</size>
-            <size if="${system.name} == 'ngage'"> 0.4</size>
+            <maxSize if="${system.name} == '3ds'">0.3 0.4</maxSize>
+            <maxSize if="${system.name} == '3do-japan'">0.3 0.4</maxSize>
+            <maxSize if="${system.name} == 'snes'">0.3 0.4</maxSize>
+            <maxSize if="${system.name} == 'ngage'">0.3 0.4</maxSize>
 
             <rotation>-4</rotation>
             <zIndex>18</zIndex>
