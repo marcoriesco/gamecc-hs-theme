@@ -71,25 +71,9 @@
         </text>
 
         <!-- Pointers -->
-        <!-- <image name="gamelist_pointer" extra="true">
-            <origin>0.5 0.5</origin>
-            <pos>0.99 0.5</pos>
-            <size>0.075 0.175</size>
-            <path>./_assets/pointers/default.png</path>
-            <path>./_assets/pointers/$system.png</path>
-            <zIndex>20</zIndex>
-
-            <storyboard event="activateNext">
-                <animation property="x" from="0.99" to="0.95" duration="200" autoreverse="true" mode="linear"/>
-            </storyboard>
-            <storyboard event="activatePrev">
-                <animation property="x" from="0.99" to="0.95" duration="200" autoreverse="true" mode="linear"/>
-            </storyboard>
-
-        </image> -->
-
         <image name="pointer" extra="true">
-            <pos>0.94 0.405</pos>
+            <origin>1 0.5</origin>
+            <pos>1 0.5</pos>
             <maxSize>0.2 0.2</maxSize>
             <path>./_assets/pointers/default.png</path>
             <path>./_assets/pointers/$system.png</path>
@@ -101,10 +85,16 @@
             </storyboard>
 
             <storyboard event="activateNext">
-                <animation property="x" from="0.94" to="0.96" duration="100" autoreverse="true" />
+                <animation property="x" from="1" to="1.02" duration="100" autoreverse="true" />
             </storyboard>
             <storyboard event="activatePrev">
-                <animation property="x" from="0.94" to="0.96" duration="100" autoreverse="true" />
+                <animation property="x" from="1" to="1.02" duration="100" autoreverse="true" />
+            </storyboard>
+            <storyboard event="deactivateNext">
+                <animation property="x" from="1" to="1.02" duration="100" />
+            </storyboard>
+            <storyboard event="deactivatePrev">
+                <animation property="x" from="1" to="1.02" duration="100" />
             </storyboard>
         </image>
 
@@ -278,7 +268,7 @@
             <origin>0 0</origin>
             <pos>0.028 0.86</pos>
             <size>0.5 0.016</size>
-            <text if="!${system.collection}">{game:releaseyear}, {game:publisher} </text>
+            <text if="!${system.collection}">{game:releaseyear}, {game:publisher}</text>
             <text if="${system.collection}">{game:system:total} && {game:system:total} > 1 ? '{game:system:total} GAMES' : '{game:system:total} GAME'</text>
             <fontPath>./_assets/fonts/hs.ttf</fontPath>
             <fontSize>0.030</fontSize>

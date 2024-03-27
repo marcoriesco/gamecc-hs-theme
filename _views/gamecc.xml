@@ -84,13 +84,14 @@
 
         <!-- Pointers -->
         <image name="pointer" extra="true">
-            <pos>0.94 0.405</pos>
+            <origin>1 0.5</origin>
+            <pos>1 0.5</pos>
             <maxSize>0.2 0.2</maxSize>
             <path>./_assets/pointers/default.png</path>
             <zIndex>42</zIndex>
 
             <storyboard>
-                <animation property="x" from="0.94" to="0.96" duration="100" autoreverse="true" />
+                <animation property="x" from="1" to="1.02" duration="100" autoreverse="true" />
             </storyboard>
         </image>
 
