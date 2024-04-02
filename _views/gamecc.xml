@@ -83,15 +83,17 @@
         </image>
 
         <!-- Pointers -->
-        <image name="pointer" extra="true">
+        <image name="staticPointer" extra="true">
             <origin>1 0.5</origin>
             <pos>1.02 0.5</pos>
             <maxSize>0.15 0.15</maxSize>
+            <rotationOrigin>1 1</rotationOrigin>
             <path>./_assets/pointers/default.png</path>
-            <zIndex>42</zIndex>
+            <zIndex>44</zIndex>
 
             <storyboard>
-                <animation property="x" from="1.02" to="1.04" duration="100" autoreverse="true" />
+                <animation property="x" from="1.02" to="1.04" duration="100" begin="10" autoreverse="true" />
+                <!-- <animation property="rotation" from="0" to="-35" duration="100" begin="0" autoreverse="true" /> -->
             </storyboard>
         </image>
 
@@ -135,7 +137,7 @@
             <size>0.5 0.10</size>
             <text>${system.fullName}</text>
             <fontPath>./_assets/fonts/hs.ttf</fontPath>
-            <fontSize>0.044</fontSize>
+            <fontSize>0.054</fontSize>
             <color>FFFF00FF</color>
             <glowColor>000000</glowColor>
             <glowSize>2</glowSize>
@@ -174,7 +176,7 @@
             </storyboard>
         </text>
 
-        <!-- imagem "FREE PLAY" -->
+        <!-- NEXT SYSTEM Controls -->
         <image name="controls" extra="true">
             <origin>0 0</origin>
             <pos>0.365625 0.89</pos>
@@ -185,11 +187,18 @@
         </image>
 
         <!-- imagem "FREE PLAY" -->
-        <image name="hs_freeplay, hs_freeplay2" extra="true">
+        <text name="hs_freeplay, hs_freeplay2" extra="true">
             <origin>0 0</origin>
-            <pos>0.01 0.92</pos>
-            <size>0.175 0.05</size>
-            <path>./_assets/_parts/hs_freeplay.png</path>
+            <pos>0.0275 0.915</pos>
+
+            <text>Press Start</text>
+            <text lang="pt">Aperte Iniciar</text>
+            <text lang="fr">Appuyez Sur Start</text>
+            <text lang="es">Presiona Inicio</text>
+
+            <fontPath>./_assets/fonts/hs.ttf</fontPath>
+            <fontSize>0.046</fontSize>
+            <color>FFFFFFFF</color>
 
             <zIndex>90</zIndex>
 
@@ -199,12 +208,16 @@
                 <animation property="color" from="FFFFFFFF" to="ffa0ff" begin="100" duration="0" mode="linear" />
                 <animation property="color" from="FFFFFFFF" to="FFFFFFFF" begin="150" duration="0" mode="linear" />
                 <animation property="color" from="FFFFFFFF" to="8ecbff" begin="200" duration="0" mode="linear" />
+
+                <animation property="y" from="0.915" to="1" begin="5000" duration="200" mode="linear" />
+                <animation property="y" from="1" to="0.915" begin="6000" duration="200" mode="linear" />
             </storyboard>
-        </image>
-        <image name="hs_freeplay2" extra="true">
+
+        </text>
+        <text name="hs_freeplay2" extra="true">
             <origin>1 0</origin>
-            <pos>0.99 0.92</pos>
-        </image>
+            <pos>0.97 0.915</pos>
+        </text>
 
     </view>
 

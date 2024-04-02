@@ -35,7 +35,6 @@
             <text lang="pt">CARREGANDO...</text>
             <text lang="fr">CHARGEMENT...</text>
             <text lang="es">CARGANDO...</text>
-            <text lang="de">WIRD GELADEN...</text>
             <zIndex>0</zIndex>
             <visible>0</visible>
         </text>

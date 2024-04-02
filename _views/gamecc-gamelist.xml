@@ -22,15 +22,15 @@
 
         <image name="gamecarouselLogo">
             <storyboard event="activate">
-                <animation property="opacity" from="0.2" to="1" duration="0" mode="Linear"/>
+                <animation property="opacity" from="0.2" to="1" duration="0" mode="linear"/>
                 <animation property="scale" from="0.70" to="1.10" begin="0" duration="0" mode="linear"/>
             </storyboard>
             <storyboard event="deactivate">
-                <animation property="opacity" from="0" to="0.2" duration="0" mode="Linear"/>
+                <animation property="opacity" from="0" to="0.2" duration="0" mode="linear"/>
                 <animation property="scale" from="1.10" to="0.60" begin="0" duration="0" mode="easeOut"/>
             </storyboard>
             <storyboard event="scroll">
-                <animation property="opacity" from="0" to="0.2" duration="0" mode="Linear"/>
+                <animation property="opacity" from="0" to="0.2" duration="0" mode="linear"/>
                 <animation property="scale" from="1.10" to="0.60" begin="0" duration="0" mode="easeOut"/>
             </storyboard>
         </image>
@@ -45,15 +45,15 @@
             <fontSize>0.060</fontSize>
 
             <storyboard event="activate">
-                <animation property="opacity" from="0.2" to="1" duration="0" mode="Linear"/>
+                <animation property="opacity" from="0.2" to="1" duration="0" mode="linear"/>
                 <animation property="scale" from="0.70" to="1.10" begin="0" duration="0" mode="linear"/>
             </storyboard>
             <storyboard event="deactivate">
-                <animation property="opacity" from="0" to="0.2" duration="0" mode="Linear"/>
+                <animation property="opacity" from="0" to="0.2" duration="0" mode="linear"/>
                 <animation property="scale" from="1.10" to="0.60" begin="0" duration="0" mode="easeOut"/>
             </storyboard>
             <storyboard event="scroll">
-                <animation property="opacity" from="0" to="0.2" duration="0" mode="Linear"/>
+                <animation property="opacity" from="0" to="0.2" duration="0" mode="linear"/>
                 <animation property="scale" from="1.10" to="0.60" begin="0" duration="0" mode="easeOut"/>
             </storyboard>
         </text>
@@ -77,24 +77,30 @@
             <maxSize>0.15 0.15</maxSize>
             <path>./_assets/pointers/default.png</path>
             <path>./_assets/pointers/$system.png</path>
+            <rotationOrigin>1 1</rotationOrigin>
 
-            <zIndex>20</zIndex>
+            <zIndex>22</zIndex>
 
             <storyboard event="open">
                 <animation property="opacity" from="1" to="1" duration="100" autoreverse="true" begin="0" repeat="1"/>
             </storyboard>
+            <storyboard event="scroll">
+                <animation property="x" from="1.02" to="1.02" duration="100" autoreverse="true" />
+            </storyboard>
 
             <storyboard event="activateNext">
                 <animation property="x" from="1.02" to="1.04" duration="100" autoreverse="true" />
+                <!-- <animation property="rotation" from="0" to="-35" duration="100" begin="0" autoreverse="true" /> -->
             </storyboard>
             <storyboard event="activatePrev">
                 <animation property="x" from="1.02" to="1.04" duration="100" autoreverse="true" />
+                <!-- <animation property="rotation" from="0" to="35" duration="100" begin="0" autoreverse="true" /> -->
             </storyboard>
             <storyboard event="deactivateNext">
-                <animation property="x" from="1.02" to="1.104" duration="0" />
+                <animation property="x" from="1.02" to="1.999" duration="0" />
             </storyboard>
             <storyboard event="deactivatePrev">
-                <animation property="x" from="1.02" to="1.104" duration="0" />
+                <animation property="x" from="1.02" to="1.999" duration="0" />
             </storyboard>
         </image>
 
@@ -296,11 +302,17 @@
         </image>
 
         <!-- imagem "PRESS START" -->
-        <image name="hs_freeplay, hs_freeplay2" extra="true">
+        <text name="hs_freeplay, hs_freeplay2" extra="true">
             <origin>0 0</origin>
-            <pos>0.015 0.92</pos>
-            <size>0.175 0.05</size>
-            <path>./_assets/_parts/hs_start.png</path>
+            <pos>0.0275 0.915</pos>
+
+            <text>Press Start</text>
+            <text lang="pt">Aperte Iniciar</text>
+            <text lang="fr">Appuyez Sur Start</text>
+            <text lang="es">Presiona Inicio</text>
+
+            <fontPath>./_assets/fonts/hs.ttf</fontPath>
+            <fontSize>0.040</fontSize>
 
             <zIndex>90</zIndex>
 
@@ -311,11 +323,11 @@
                 <animation property="color" from="FFFFFFFF" to="FFFFFFFF" begin="150" duration="0" mode="linear" />
                 <animation property="color" from="FFFFFFFF" to="8ecbff" begin="200" duration="0" mode="linear" />
             </storyboard>
-        </image>
-        <image name="hs_freeplay2" extra="true">
+        </text>
+        <text name="hs_freeplay2" extra="true">
             <origin>1 0</origin>
-            <pos>0.985 0.92</pos>
-        </image>
+            <pos>0.97 0.915</pos>
+        </text>
 
         <!-- ARCADE CONFIGS -->
         <image ifSubset="arcade_gamelist:Ativo" if="${system.name} == 'arcade'" name="md_thumbnail">
