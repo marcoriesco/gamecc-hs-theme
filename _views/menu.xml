@@ -33,7 +33,7 @@
         </menuTextSmall>
 
         <menuBackground name="menubg">
-            <color>333333</color>
+            <color>222222</color>
             <cornerSize>32 32</cornerSize>
         </menuBackground>
 

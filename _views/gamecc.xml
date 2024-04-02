@@ -177,14 +177,14 @@
         </text>
 
         <!-- NEXT SYSTEM Controls -->
-        <image name="controls" extra="true">
+        <!-- <image name="controls" extra="true">
             <origin>0 0</origin>
             <pos>0.365625 0.89</pos>
             <size>0.26875 </size>
             <delay>0.1</delay>
             <path>./../_assets/_parts/controls.gif</path>
             <zIndex>99</zIndex>
-        </image>
+        </image> -->
 
         <!-- imagem "FREE PLAY" -->
         <text name="hs_freeplay, hs_freeplay2" extra="true">
@@ -209,10 +209,9 @@
                 <animation property="color" from="FFFFFFFF" to="FFFFFFFF" begin="150" duration="0" mode="linear" />
                 <animation property="color" from="FFFFFFFF" to="8ecbff" begin="200" duration="0" mode="linear" />
 
-                <animation property="y" from="0.915" to="1" begin="5000" duration="200" mode="linear" />
-                <animation property="y" from="1" to="0.915" begin="6000" duration="200" mode="linear" />
+                <!-- <animation property="y" from="0.915" to="1" begin="5000" duration="200" mode="linear" />
+                <animation property="y" from="1" to="0.915" begin="6000" duration="200" mode="linear" /> -->
             </storyboard>
-
         </text>
         <text name="hs_freeplay2" extra="true">
             <origin>1 0</origin>
@@ -222,6 +221,7 @@
     </view>
 
     <view name="screen">
+
         <!-- controllerActivity -->
         <controllerActivity name="controllerActivity">
             <visible>false</visible>
