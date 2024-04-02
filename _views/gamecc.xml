@@ -177,14 +177,14 @@
         </text>
 
         <!-- NEXT SYSTEM Controls -->
-        <!-- <image name="controls" extra="true">
+        <image name="controls" extra="true">
             <origin>0 0</origin>
             <pos>0.365625 0.89</pos>
             <size>0.26875 </size>
             <delay>0.1</delay>
             <path>./../_assets/_parts/controls.gif</path>
             <zIndex>99</zIndex>
-        </image> -->
+        </image>
 
         <!-- imagem "FREE PLAY" -->
         <text name="hs_freeplay, hs_freeplay2" extra="true">
