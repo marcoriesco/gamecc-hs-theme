@@ -84,23 +84,20 @@
             <storyboard event="open">
                 <animation property="opacity" from="1" to="1" duration="100" autoreverse="true" begin="0" repeat="1"/>
             </storyboard>
-            <storyboard event="scroll">
-                <animation property="x" from="1.02" to="1.02" duration="100" autoreverse="true" />
-            </storyboard>
 
             <storyboard event="activateNext">
-                <animation property="x" from="1.02" to="1.04" duration="100" autoreverse="true" />
-                <!-- <animation property="rotation" from="0" to="-35" duration="100" begin="0" autoreverse="true" /> -->
+                <animation property="offsetX" to="0.02" duration="150" autoReverse="true" />
+                <!-- <animation property="rotation" to="-35" duration="100" autoReverse="true" /> -->
             </storyboard>
             <storyboard event="activatePrev">
-                <animation property="x" from="1.02" to="1.04" duration="100" autoreverse="true" />
-                <!-- <animation property="rotation" from="0" to="35" duration="100" begin="0" autoreverse="true" /> -->
+                <animation property="offsetX" to="0.02" duration="150" autoReverse="true" />
+                <!-- <animation property="rotation" to="-35" duration="100" autoReverse="true" /> -->
             </storyboard>
             <storyboard event="deactivateNext">
-                <animation property="x" from="1.02" to="1.999" duration="0" />
+                <animation property="x" from="1.02" to="2" duration="0" />
             </storyboard>
             <storyboard event="deactivatePrev">
-                <animation property="x" from="1.02" to="1.999" duration="0" />
+                <animation property="x" from="1.02" to="2" duration="0" />
             </storyboard>
         </image>
 

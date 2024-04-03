@@ -92,8 +92,8 @@
             <zIndex>44</zIndex>
 
             <storyboard>
-                <animation property="x" from="1.02" to="1.04" duration="100" begin="10" autoreverse="true" />
-                <!-- <animation property="rotation" from="0" to="-35" duration="100" begin="0" autoreverse="true" /> -->
+                <animation property="offsetX" to="0.02" duration="150" autoReverse="true" />
+                <!-- <animation property="rotation" to="-35" duration="100" autoReverse="true" /> -->
             </storyboard>
         </image>
 
