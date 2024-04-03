@@ -87,7 +87,7 @@
 
             <storyboard event="activateNext">
                 <animation property="offsetX" to="0.02" duration="150" autoReverse="true" />
-                <!-- <animation property="rotation" to="-35" duration="100" autoReverse="true" /> -->
+                <animation property="rotation" to="-35" duration="100" autoReverse="true" />
             </storyboard>
             <storyboard event="activatePrev">
                 <animation property="offsetX" to="0.02" duration="150" autoReverse="true" />
