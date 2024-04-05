@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <theme>
     <formatVersion>7</formatVersion>
-
     <view name="gamecarousel" tinyScreen="false" displayName="GAMELIST">
         <gamecarousel name="gamecarousel">
             <type>vertical_wheel</type>
@@ -87,7 +86,7 @@
 
             <storyboard event="activateNext">
                 <animation property="offsetX" to="0.02" duration="150" autoReverse="true" />
-                <animation property="rotation" to="-35" duration="100" autoReverse="true" />
+                <!-- <animation property="rotation" to="-35" duration="100" autoReverse="true" /> -->
             </storyboard>
             <storyboard event="activatePrev">
                 <animation property="offsetX" to="0.02" duration="150" autoReverse="true" />

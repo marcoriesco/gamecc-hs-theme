@@ -19,7 +19,7 @@
             <fontPath>./_assets/fonts/RobotoCondensed-Regular.ttf</fontPath>
             <fontSize>0.022</fontSize>
             <color>868686</color>
-            <separatorColor>333333</separatorColor>
+            <separatorColor>222222</separatorColor>
             <selectorColor>9f0043</selectorColor>
             <selectorColorEnd>9f0043</selectorColorEnd>
             <selectedColor>FFFFFF</selectedColor>

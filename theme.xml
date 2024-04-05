@@ -72,11 +72,23 @@
 
     <include name="system">./_views/gamecc.xml</include>
     <include name="menu">./_views/menu.xml</include>
+    <include name="grid">./_views/common/grid.xml</include>
 
-    <include ifSubset="logo_carousel:clean" name="system">./_views/logos/clean.xml</include>
+    <include ifSubset="logo_carousel:black" name="system">./_views/logos/black.xml</include>
     <include ifSubset="logo_carousel:silver" name="system">./_views/logos/silver.xml</include>
+    <include ifSubset="logo_carousel:clean" name="system">./_views/logos/clean.xml</include>
     <include ifSubset="logo_carousel:glass" name="system">./_views/logos/glass.xml</include>
 
     <include name="gamecarousel">./_views/gamecc-gamelist.xml</include>
+
+    <!--
+    Theme: es-theme-carbon
+    author: Fabrice CARUSO
+    license: creative commons CC-BY-NC-SA
+    originally based on: "Carbon" by Eric Hettervik (Rookervik)
+    originally based on: "simple" by nils bonenberger
+    -->
+    <include name="grid">./_views/common/content.xml</include>
+    <include name="grid">./_views/common/${system.theme}.xml</include>
 
 </theme>
