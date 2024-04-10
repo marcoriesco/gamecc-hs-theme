@@ -26,9 +26,17 @@
 
     <!-- VIDEO THEME CINEMATIC SYSTEM -->
     <subset name="logo_carousel" displayName="LOGOS">
+        <include name="riescade" />
+        <include name="black" />
         <include name="silver" />
         <include name="clean" />
         <include name="glass" />
+    </subset>
+
+    <!-- PONTEIROS NA ROLETA -->
+    <subset name="pointer_system" displayName="POINTERS NA ROLETA">
+        <include name="Ativo" />
+        <include name="Desativado" />
     </subset>
 
     <!-- TIPO DE LOGO ROLETA -->
@@ -37,6 +45,11 @@
         <include name="Desativado" />
     </subset>
 
+    <!-- PONTEIROS NA ROLETA -->
+    <subset name="pointer_gamelist" displayName="POINTERS NA ROLETA">
+        <include name="Ativo" />
+        <include name="Desativado" />
+    </subset>
     <!-- VIDEO GAMELIST -->
     <subset name="video_gamelist" displayName="GAMEPLAY" appliesTo="gamelist">
         <include name="Ativo" />
@@ -72,8 +85,8 @@
 
     <include name="system">./_views/gamecc.xml</include>
     <include name="menu">./_views/menu.xml</include>
-    <include name="grid">./_views/common/grid.xml</include>
 
+    <include ifSubset="logo_carousel:riescade" name="system">./_views/logos/riescade.xml</include>
     <include ifSubset="logo_carousel:black" name="system">./_views/logos/black.xml</include>
     <include ifSubset="logo_carousel:silver" name="system">./_views/logos/silver.xml</include>
     <include ifSubset="logo_carousel:clean" name="system">./_views/logos/clean.xml</include>
@@ -88,7 +101,8 @@
     originally based on: "Carbon" by Eric Hettervik (Rookervik)
     originally based on: "simple" by nils bonenberger
     -->
-    <include name="grid">./_views/common/content.xml</include>
-    <include name="grid">./_views/common/${system.theme}.xml</include>
+    <include name="grid">./_views/common/grid.xml</include>
+    <include>./_views/common/content.xml</include>
+    <include>./_views/common/${system.theme}.xml</include>
 
 </theme>

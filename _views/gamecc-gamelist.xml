@@ -70,7 +70,7 @@
         </text>
 
         <!-- Pointers -->
-        <image name="pointer" extra="true">
+        <image name="pointer" extra="true" ifSubset="pointer_gamelist:Ativo">
             <origin>1 0.5</origin>
             <pos>1.02 0.5</pos>
             <maxSize>0.15 0.15</maxSize>
