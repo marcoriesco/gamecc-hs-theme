@@ -86,11 +86,11 @@
 
             <storyboard event="activateNext">
                 <animation property="offsetX" to="0.02" duration="150" autoReverse="true" />
-                <!-- <animation property="rotation" to="-35" duration="100" autoReverse="true" /> -->
+                <animation property="offsetX" begin="1000" to="0.2" duration="500" mode="linear" ifSubset="video_system_cinematic:Ativo" />
             </storyboard>
             <storyboard event="activatePrev">
                 <animation property="offsetX" to="0.02" duration="150" autoReverse="true" />
-                <!-- <animation property="rotation" to="-35" duration="100" autoReverse="true" /> -->
+                <animation property="offsetX" begin="1000" to="0.2" duration="500" mode="linear" ifSubset="video_system_cinematic:Ativo" />
             </storyboard>
             <storyboard event="deactivateNext">
                 <animation property="x" from="1.02" to="2" duration="0" />
@@ -165,6 +165,9 @@
 
             <storyboard event="activate">
                 <animation property="opacity" from="0" to="1" duration="800" mode="easeIn" />
+            </storyboard>
+            <storyboard event="deactivate">
+                <animation property="opacity" from="1" to="0" duration="800" mode="easeIn" />
             </storyboard>
         </image>
 
@@ -309,6 +312,9 @@
 
             <fontPath>./_assets/fonts/hs.ttf</fontPath>
             <fontSize>0.040</fontSize>
+            <glowColor>000000</glowColor>
+            <glowSize>2</glowSize>
+            <glowOffset>1</glowOffset>
 
             <zIndex>90</zIndex>
 

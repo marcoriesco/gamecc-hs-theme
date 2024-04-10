@@ -83,154 +83,165 @@
         </image>
 
         <!-- Pointers -->
-        <origin>1 0.5</origin>
-        <pos>1.02 0.5</pos>
-        <maxSize>0.15 0.15</maxSize>
-        <rotationOrigin>1 1</rotationOrigin>
-        <path>./_assets/pointers/default.png</path>
-        <zIndex>44</zIndex>
+        <image name="pointer" extra="true" ifSubset="pointer_system:Ativo">
+            <origin>1 0.5</origin>
+            <pos>1.02 0.5</pos>
+            <maxSize>0.15 0.15</maxSize>
+            <rotationOrigin>1 1</rotationOrigin>
+            <path>./_assets/pointers/default.png</path>
+            <zIndex>44</zIndex>
 
-        <storyboard>
-            <animation property="offsetX" to="0.02" duration="150" autoReverse="true" />
-            <!-- <animation property="rotation" to="-35" duration="100" autoReverse="true" /> -->
-        </storyboard>
-    </image>
+            <storyboard>
+                <animation property="offsetX" to="0.02" duration="150" autoReverse="true" />
+                <animation property="offsetX" begin="1000" to="0.2" duration="500" mode="linear" ifSubset="video_system_cinematic:Ativo" />
+            </storyboard>
+        </image>
 
-    <image name="art" extra="true">
-        <origin>0 0</origin>
-        <pos>0 0</pos>
-        <size>1 1</size>
-        <linearSmooth>true</linearSmooth>
-        <path>./_assets/arts/$system.jpg</path>
-        <path ifSubset="video_system_cinematic:Ativo">./_assets/frames/$system.jpg</path>
-        <zIndex>39</zIndex>
-    </image>
+        <image name="art" extra="static">
+            <origin>0 0</origin>
+            <pos>0 0</pos>
+            <size>1 1</size>
+            <linearSmooth>true</linearSmooth>
+            <path>./_assets/arts/$system.jpg</path>
+            <path ifSubset="video_system_cinematic:Ativo">./_assets/frames/$system.jpg</path>
+            <scale>1.10</scale>
+            <scaleOrigin>0.5</scaleOrigin>
+            <zIndex>39</zIndex>
 
-    <video ifSubset="video_system_cinematic:Ativo" name="md_theme" extra="true">
-        <origin>0 0</origin>
-        <pos>0 0</pos>
-        <size>1 1</size>
-        <delay>0.1</delay>
-        <effect>none</effect>
-        <path>./../_assets/themes/$system.mp4</path>
-        <zIndex>40</zIndex>
+            <storyboard>
+                <animation property="offsetX" to="0.01" duration="300" />
+                <animation property="opacity" from="0" to="1" duration="100" />
+            </storyboard>
+        </image>
 
-        <storyboard event="activate">
-            <animation property="opacity" from="0" to="1" duration="800" mode="easeIn" />
-        </storyboard>
-    </video>
+        <video ifSubset="video_system_cinematic:Ativo" name="md_theme" extra="true">
+            <origin>0 0</origin>
+            <pos>0 0</pos>
+            <size>1 1</size>
+            <delay>0.1</delay>
+            <effect>none</effect>
+            <path>./../_assets/themes/$system.mp4</path>
+            <zIndex>40</zIndex>
 
-    <!-- Overlay Background -->
-    <image name="overlay" extra="true">
-        <origin>0 0</origin>
-        <pos>0 0</pos>
-        <size>1 1</size>
-        <path>./_assets/_parts/overlay.png</path>
-        <zIndex>41</zIndex>
-    </image>
+            <storyboard event="activate">
+                <animation property="opacity" from="0" to="1" duration="800" mode="easeIn" />
+            </storyboard>
+        </video>
 
-    <!-- System Title -->
-    <text name="system_title" extra="true">
-        <origin>0 0</origin>
-        <pos>0.032 0.77</pos>
-        <size>0.5 0.10</size>
-        <text>${system.fullName}</text>
-        <fontPath>./_assets/fonts/hs.ttf</fontPath>
-        <fontSize>0.054</fontSize>
-        <color>FFFF00FF</color>
-        <glowColor>000000</glowColor>
-        <glowSize>2</glowSize>
-        <glowOffset>1</glowOffset>
-        <alignment>left</alignment>
-        <zIndex>50</zIndex>
+        <!-- Overlay Background -->
+        <image name="overlay" extra="true">
+            <origin>0 0</origin>
+            <pos>0 0</pos>
+            <size>1 1</size>
+            <path>./_assets/_parts/overlay.png</path>
+            <zIndex>41</zIndex>
+        </image>
 
-        <storyboard>
-            <animation property="opacity" from="0" to="1" duration="800" mode="EaseIn" />
-        </storyboard>
-    </text>
+        <!-- System Title -->
+        <text name="system_title" extra="true">
+            <origin>0 0</origin>
+            <pos>0.032 0.77</pos>
+            <size>0.5 0.10</size>
+            <text>${system.fullName}</text>
+            <fontPath>./_assets/fonts/hs.ttf</fontPath>
+            <fontSize>0.054</fontSize>
+            <color>FFFF00FF</color>
+            <glowColor>000000</glowColor>
+            <glowSize>2</glowSize>
+            <glowOffset>1</glowOffset>
+            <alignment>left</alignment>
+            <zIndex>50</zIndex>
 
-    <!-- Número de Games -->
-    <text name="systemInfo">
-        <zIndex>0</zIndex>
-    </text>
+            <storyboard>
+                <animation property="opacity" from="0" to="1" duration="800" mode="EaseIn" />
+            </storyboard>
+        </text>
 
-    <text name="systeminfo_gamecc" extra="true">
-        <origin>0 0</origin>
-        <pos>0.032 0.86</pos>
-        <size>0.5 0.016</size>
-        <text>{binding:total} games ${system}</text>
-        <text if="${system.name} == 'retrobat'">{binding:total} sistemas</text>
-        <fontPath>./_assets/fonts/hs.ttf</fontPath>
-        <fontSize>0.030</fontSize>
-        <color>FFFF00FF</color>
-        <glowColor>000000</glowColor>
-        <glowSize>2</glowSize>
-        <glowOffset>1</glowOffset>
-        <alignment>left</alignment>
-        <systemInfoDelay>0</systemInfoDelay>
-        <zIndex>95</zIndex>
+        <!-- Número de Games -->
+        <text name="systemInfo">
+            <zIndex>0</zIndex>
+        </text>
 
-        <storyboard>
-            <animation property="opacity" from="0" to="1" duration="1200" mode="EaseIn" />
-        </storyboard>
-    </text>
+        <text name="systeminfo_gamecc" extra="true">
+            <origin>0 0</origin>
+            <pos>0.032 0.86</pos>
+            <size>0.5 0.016</size>
+            <text>{binding:total} games ${system}</text>
+            <text if="${system.name} == 'retrobat'">{binding:total} sistemas</text>
+            <fontPath>./_assets/fonts/hs.ttf</fontPath>
+            <fontSize>0.030</fontSize>
+            <color>FFFF00FF</color>
+            <glowColor>000000</glowColor>
+            <glowSize>2</glowSize>
+            <glowOffset>1</glowOffset>
+            <alignment>left</alignment>
+            <systemInfoDelay>0</systemInfoDelay>
+            <zIndex>95</zIndex>
 
-    <!-- NEXT SYSTEM Controls -->
-    <image name="controls" extra="true">
-        <origin>0 0</origin>
-        <pos>0.365625 0.89</pos>
-        <size>0.26875 </size>
-        <delay>0.1</delay>
-        <path>./../_assets/_parts/controls.gif</path>
-        <zIndex>99</zIndex>
-    </image>
+            <storyboard>
+                <animation property="opacity" from="0" to="1" duration="1200" mode="EaseIn" />
+            </storyboard>
+        </text>
 
-    <!-- imagem "FREE PLAY" -->
-    <text name="hs_freeplay, hs_freeplay2" extra="true">
-        <origin>0 0</origin>
-        <pos>0.0275 0.915</pos>
+        <!-- NEXT SYSTEM Controls -->
+        <image name="controls" extra="true">
+            <origin>0 0</origin>
+            <pos>0.365625 0.89</pos>
+            <size>0.26875 </size>
+            <delay>0.1</delay>
+            <path>./../_assets/_parts/controls.gif</path>
+            <zIndex>99</zIndex>
+        </image>
 
-        <text>Press Start</text>
-        <text lang="pt">Aperte Iniciar</text>
-        <text lang="fr">Appuyez Sur Start</text>
-        <text lang="es">Presiona Inicio</text>
+        <!-- imagem "FREE PLAY" -->
+        <text name="hs_freeplay, hs_freeplay2" extra="true">
+            <origin>0 0</origin>
+            <pos>0.0275 0.915</pos>
 
-        <fontPath>./_assets/fonts/hs.ttf</fontPath>
-        <fontSize>0.046</fontSize>
-        <color>FFFFFFFF</color>
+            <text>Press Start</text>
+            <text lang="pt">Aperte Iniciar</text>
+            <text lang="fr">Appuyez Sur Start</text>
+            <text lang="es">Presiona Inicio</text>
 
-        <zIndex>90</zIndex>
+            <fontPath>./_assets/fonts/hs.ttf</fontPath>
+            <fontSize>0.046</fontSize>
+            <color>FFFFFFFF</color>
+            <glowColor>000000</glowColor>
+            <glowSize>2</glowSize>
+            <glowOffset>1</glowOffset>
 
-        <storyboard repeat="forever">
-            <animation property="color" from="FFFFFFFF" to="8ecbff" begin="0" duration="0" mode="linear" />
-            <animation property="color" from="FFFFFFFF" to="99fe96" begin="50" duration="0" mode="linear" />
-            <animation property="color" from="FFFFFFFF" to="ffa0ff" begin="100" duration="0" mode="linear" />
-            <animation property="color" from="FFFFFFFF" to="FFFFFFFF" begin="150" duration="0" mode="linear" />
-            <animation property="color" from="FFFFFFFF" to="8ecbff" begin="200" duration="0" mode="linear" />
+            <zIndex>90</zIndex>
 
-            <!-- <animation property="y" from="0.915" to="1" begin="5000" duration="200" mode="linear" />
+            <storyboard repeat="forever">
+                <animation property="color" from="FFFFFFFF" to="8ecbff" begin="0" duration="0" mode="linear" />
+                <animation property="color" from="FFFFFFFF" to="99fe96" begin="50" duration="0" mode="linear" />
+                <animation property="color" from="FFFFFFFF" to="ffa0ff" begin="100" duration="0" mode="linear" />
+                <animation property="color" from="FFFFFFFF" to="FFFFFFFF" begin="150" duration="0" mode="linear" />
+                <animation property="color" from="FFFFFFFF" to="8ecbff" begin="200" duration="0" mode="linear" />
+
+                <!-- <animation property="y" from="0.915" to="1" begin="5000" duration="200" mode="linear" />
                 <animation property="y" from="1" to="0.915" begin="6000" duration="200" mode="linear" /> -->
-        </storyboard>
-    </text>
-    <text name="hs_freeplay2" extra="true">
-        <origin>1 0</origin>
-        <pos>0.97 0.915</pos>
-    </text>
+            </storyboard>
+        </text>
+        <text name="hs_freeplay2" extra="true">
+            <origin>1 0</origin>
+            <pos>0.97 0.915</pos>
+        </text>
 
-</view>
+    </view>
 
-<view name="screen">
+    <view name="screen">
 
-    <!-- controllerActivity -->
-    <controllerActivity name="controllerActivity">
-        <visible>false</visible>
-    </controllerActivity>
+        <!-- controllerActivity -->
+        <controllerActivity name="controllerActivity">
+            <visible>false</visible>
+        </controllerActivity>
 
-    <!-- Clock -->
-    <text name="clock">
-        <visible>false</visible>
-    </text>
+        <!-- Clock -->
+        <text name="clock">
+            <visible>false</visible>
+        </text>
 
-</view>
+    </view>
 
 </theme>
