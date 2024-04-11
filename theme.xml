@@ -21,60 +21,7 @@
 <theme defaultView="gamecarousel">
     <formatVersion>7</formatVersion>
 
-    <!-- ICONSETS -->
-    <include name="DEFAULT">./_assets/iconsets/default.xml</include>
-
-    <!-- VIDEO THEME CINEMATIC SYSTEM -->
-    <subset name="logo_carousel" displayName="LOGOS">
-        <include name="riescade" />
-        <include name="black" />
-        <include name="silver" />
-        <include name="clean" />
-        <include name="glass" />
-    </subset>
-
-    <!-- PONTEIROS NA ROLETA -->
-    <subset name="pointer_system" displayName="POINTERS NA ROLETA">
-        <include name="Ativo" />
-        <include name="Desativado" />
-    </subset>
-
-    <!-- TIPO DE LOGO ROLETA -->
-    <subset name="video_system_cinematic" displayName="VIDEO THEMES">
-        <include name="Ativo" />
-        <include name="Desativado" />
-    </subset>
-
-    <!-- PONTEIROS NA ROLETA -->
-    <subset name="pointer_gamelist" displayName="POINTERS NA ROLETA">
-        <include name="Ativo" />
-        <include name="Desativado" />
-    </subset>
-    <!-- VIDEO GAMELIST -->
-    <subset name="video_gamelist" displayName="GAMEPLAY" appliesTo="gamelist">
-        <include name="Ativo" />
-        <include name="Desativado" />
-    </subset>
-
-    <!-- VIDEO THEME CINEMATIC GAMELIST -->
-    <subset name="video_cinematic" displayName="VIDEO THEMES" appliesTo="gamelist">
-        <include name="Ativo" />
-        <include name="Desativado" />
-    </subset>
-
-    <!-- TRANSIÇÕES ENTRE THEMES CINEMATICS -->
-    <subset name="video_cinematic_transition" displayName="VIDEO TRANSITIONS" appliesTo="gamelist">
-        <include name="Ativo" />
-        <include name="Desativado" />
-    </subset>
-
-    <!-- ARCADE GAMELIST: THEME DEFAULT -->
-    <subset name="arcade_gamelist" displayName="ARCADE: THEME DEFAULT" appliesTo="gamelist">
-        <include name="Ativo" />
-        <include name="Desativado" />
-    </subset>
-
-
+    <include name="system">./_views/subsets/subsets.xml</include>
 
     <feature supported="carousel">
         <view name="system">
